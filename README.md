@@ -16,6 +16,9 @@ RocketMqSpout's messages retrying depends on RocketMQ's push mode retry policy.
         properties.setProperty(SpoutConfig.NAME_SERVER_ADDR, nameserverAddr);
         properties.setProperty(SpoutConfig.CONSUMER_GROUP, group);
         properties.setProperty(SpoutConfig.CONSUMER_TOPIC, topic);
+        //modified here
+        properties.setProperty("AccessKey", "your aliyun accessKey");
+        properties.setProperty("AccessSecret", "your aliyun accessSecret");
 
         RocketMqSpout spout = new RocketMqSpout(properties);
  ```
